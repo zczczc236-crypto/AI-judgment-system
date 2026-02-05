@@ -1,0 +1,4 @@
+cd worker
+npm install -g wrangler
+wrangler login
+wrangler publish
