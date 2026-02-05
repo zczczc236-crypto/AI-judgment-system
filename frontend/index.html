@@ -7,10 +7,29 @@
 </head>
 <body>
   <h1>RealOrAI</h1>
-  <p>이 이미지, AI가 만들었을까요?</p>
+  <div id="language-toggle">
+    <button onclick="setLang('ko')">KO</button>
+    <button onclick="setLang('en')">EN</button>
+  </div>
 
-  <input type="file" id="file" />
-  <button onclick="upload()">판별하기</button>
+  <div id="auth">
+    <h2 id="auth-title">로그인</h2>
+    <input type="email" id="email" placeholder="이메일" />
+    <input type="password" id="password" placeholder="비밀번호" />
+    <button onclick="login()">로그인</button>
+    <button onclick="signup()">회원가입</button>
+  </div>
+
+  <div id="upload-section" style="display:none;">
+    <input type="file" id="file" />
+    <button onclick="uploadImage()">판별하기</button>
+    <button onclick="showHistory()">히스토리</button>
+  </div>
+
+  <div id="history-section" style="display:none;">
+    <h3>히스토리</h3>
+    <ul id="history-list"></ul>
+  </div>
 
   <script src="main.js"></script>
 </body>
