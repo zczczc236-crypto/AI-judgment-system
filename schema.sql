@@ -1,0 +1,17 @@
+CREATE TABLE users (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  email TEXT UNIQUE,
+  password TEXT
+);
+
+CREATE TABLE sessions (
+  token TEXT PRIMARY KEY,
+  user_id INTEGER
+);
+
+CREATE TABLE history (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id INTEGER,
+  result TEXT,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
